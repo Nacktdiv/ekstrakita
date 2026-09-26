@@ -34,12 +34,15 @@ export default function RequestBorrowingPage() {
   const [loadingItem, setLoadingItem] = React.useState(true);
 
   // Form states
-  const [borrowDate, setBorrowDate] = React.useState(
-    new Date().toISOString().split('T')[0]
-  );
-  const [returnDate, setReturnDate] = React.useState(
-    new Date(Date.now() + 3 * 24 * 60 * 60 * 1000).toISOString().split('T')[0]
-  );
+  const [borrowDate, setBorrowDate] = React.useState('');
+  const [returnDate, setReturnDate] = React.useState('');
+
+  React.useEffect(() => {
+    const today = new Date();
+    setBorrowDate(today.toISOString().split('T')[0]);
+    const later = new Date(today.getTime() + 3 * 24 * 60 * 60 * 1000);
+    setReturnDate(later.toISOString().split('T')[0]);
+  }, []);
 
   // PDF states
   const [pdfFile, setPdfFile] = React.useState<File | null>(null);
@@ -454,7 +457,7 @@ export default function RequestBorrowingPage() {
                 <div>
                   <p className="font-bold">Tentukan Lokasi Tanda Tangan Digital (TTD):</p>
                   <p className="text-blue-800 mt-0.5">
-                    Geser kotak transparan bertuliskan <span className="font-semibold">"Area Tanda Tangan"</span> pada canvas di bawah ke bagian lembar pengesahan surpin. Gunakan tombol <span className="font-semibold">"Auto-Snap Bottom Right"</span> jika ingin menempatkan langsung di sudut kanan bawah.
+                    Geser kotak transparan bertuliskan <span className="font-semibold">&quot;Area Tanda Tangan&quot;</span> pada canvas di bawah ke bagian lembar pengesahan surpin. Gunakan tombol <span className="font-semibold">&quot;Auto-Snap Bottom Right&quot;</span> jika ingin menempatkan langsung di sudut kanan bawah.
                   </p>
                 </div>
               </div>

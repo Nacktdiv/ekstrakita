@@ -46,7 +46,10 @@ export async function updateSession(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
 
   // Define public and auth routes
-  const isAuthRoute = pathname.startsWith('/login') || pathname.startsWith('/register');
+  const isAuthRoute =
+    pathname.startsWith('/login') ||
+    pathname.startsWith('/register') ||
+    pathname.startsWith('/auth');
   const isApiRoute = pathname.startsWith('/api');
   const isPublicStatic =
     pathname.startsWith('/_next') ||

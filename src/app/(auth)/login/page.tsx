@@ -6,16 +6,24 @@ import { useRouter, useSearchParams } from 'next/navigation';
 import { Sparkles, ArrowRight, Lock, Mail, AlertCircle, Loader2 } from 'lucide-react';
 import { createClient } from '@/lib/supabase/client';
 import { Button } from '@/components/ui/button';
+import OAuthButtons from '@/components/auth/OAuthButtons';
 
 export default function LoginPage() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const redirectTo = searchParams.get('redirectTo') || '/dashboard';
+  const paramError = searchParams.get('error');
 
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
   const [loading, setLoading] = React.useState(false);
   const [error, setError] = React.useState<string | null>(null);
+
+  React.useEffect(() => {
+    if (paramError) {
+      setError(decodeURIComponent(paramError));
+    }
+  }, [paramError]);
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -59,7 +67,7 @@ export default function LoginPage() {
 
         {/* Error Alert */}
         {error && (
-          <div className="mt-4 p-3 bg-rose-50 border border-rose-200 rounded-xl flex items-start gap-2.5 text-rose-800 text-xs">
+          <div className="mt-4 p-3 bg-rose-50 border border-rose-200 rounded-xl flex items-start gap-2.5 text-rose-800 text-xs animate-in fade-in">
             <AlertCircle className="h-4 w-4 text-rose-600 mt-0.5 flex-shrink-0" />
             <span>{error}</span>
           </div>
@@ -119,6 +127,9 @@ export default function LoginPage() {
             )}
           </Button>
         </form>
+
+        {/* OAuth Social Buttons (Google & GitHub) */}
+        <OAuthButtons redirectTo={redirectTo} actionText="Masuk" />
 
         {/* Footer Link */}
         <div className="mt-6 text-center text-xs text-slate-500">

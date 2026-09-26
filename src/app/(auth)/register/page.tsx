@@ -7,6 +7,7 @@ import { Sparkles, ArrowRight, Lock, Mail, User as UserIcon, Shield, AlertCircle
 import { createClient } from '@/lib/supabase/client';
 import { Button } from '@/components/ui/button';
 import { UserRole } from '@/types';
+import OAuthButtons from '@/components/auth/OAuthButtons';
 
 export default function RegisterPage() {
   const router = useRouter();
@@ -186,6 +187,9 @@ export default function RegisterPage() {
             )}
           </Button>
         </form>
+
+        {/* OAuth Social Buttons (Google & GitHub) */}
+        <OAuthButtons redirectTo="/dashboard" actionText="Daftar" />
 
         {/* Footer Link */}
         <div className="mt-6 text-center text-xs text-slate-500">

@@ -28,4 +28,5 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans);
   min-height: 100vh;
+  overflow-x: hidden;
 }

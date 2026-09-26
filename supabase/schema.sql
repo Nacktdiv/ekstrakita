@@ -60,19 +60,24 @@ CREATE TABLE IF NOT EXISTS public.cash_ledger (
     created_at TIMESTAMP WITH TIME ZONE DEFAULT TIMEZONE('utc', NOW())
 );
 
--- 6. Trigger to automatically sync auth.users to public.users on sign up
+-- 6. Trigger to automatically sync auth.users to public.users on sign up (Credentials & OAuth Google/GitHub)
 CREATE OR REPLACE FUNCTION public.handle_new_user()
 RETURNS trigger AS $$
 BEGIN
   INSERT INTO public.users (id, name, email, role)
   VALUES (
     new.id,
-    COALESCE(new.raw_user_meta_data->>'name', split_part(new.email, '@', 1)),
+    COALESCE(
+      new.raw_user_meta_data->>'full_name',
+      new.raw_user_meta_data->>'name',
+      new.raw_user_meta_data->>'user_name',
+      split_part(new.email, '@', 1)
+    ),
     new.email,
     COALESCE(new.raw_user_meta_data->>'role', 'member')
   )
   ON CONFLICT (id) DO UPDATE SET
-    name = EXCLUDED.name,
+    name = COALESCE(EXCLUDED.name, public.users.name),
     email = EXCLUDED.email;
   RETURN new;
 END;

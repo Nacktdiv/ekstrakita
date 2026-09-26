@@ -104,3 +104,71 @@ export const MOCK_BORROWING_REQUESTS = [
   },
 ];
 
+export const MOCK_CASH_LEDGER = [
+  {
+    id: 'cash-001',
+    type: 'income' as const,
+    amount: 1500000,
+    description: 'Dana Pembinaan Sekolah Semester Ganjil',
+    proof_image_url: 'https://images.unsplash.com/photo-1554415707-9e4966a604f7?w=800&auto=format&fit=crop&q=80',
+    created_by: 'user-bendahara',
+    created_at: new Date(Date.now() - 10 * 24 * 3600 * 1000).toISOString(),
+    creator: {
+      id: 'user-bendahara',
+      name: 'Adinda Putri (Bendahara)',
+      email: 'adinda.bendahara@extrakita.sch.id',
+      role: 'bendahara' as const,
+      created_at: new Date().toISOString(),
+    },
+  },
+  {
+    id: 'cash-002',
+    type: 'income' as const,
+    amount: 450000,
+    description: 'Iuran Kas Rutin Anggota (Bulan Ini - 15 Siswa)',
+    proof_image_url: 'https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=800&auto=format&fit=crop&q=80',
+    created_by: 'user-bendahara',
+    created_at: new Date(Date.now() - 5 * 24 * 3600 * 1000).toISOString(),
+    creator: {
+      id: 'user-bendahara',
+      name: 'Adinda Putri (Bendahara)',
+      email: 'adinda.bendahara@extrakita.sch.id',
+      role: 'bendahara' as const,
+      created_at: new Date().toISOString(),
+    },
+  },
+  {
+    id: 'cash-003',
+    type: 'expense' as const,
+    amount: 185000,
+    description: 'Beli Kabel HDMI 10M & Baterai Mic Wireless AA',
+    proof_image_url: 'https://images.unsplash.com/photo-1607344645866-009c320c5ab8?w=800&auto=format&fit=crop&q=80',
+    created_by: 'user-bendahara',
+    created_at: new Date(Date.now() - 3 * 24 * 3600 * 1000).toISOString(),
+    creator: {
+      id: 'user-bendahara',
+      name: 'Adinda Putri (Bendahara)',
+      email: 'adinda.bendahara@extrakita.sch.id',
+      role: 'bendahara' as const,
+      created_at: new Date().toISOString(),
+    },
+  },
+  {
+    id: 'cash-004',
+    type: 'expense' as const,
+    amount: 220000,
+    description: 'Snack & Konsumsi Latihan Gabungan Ekskul',
+    proof_image_url: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&auto=format&fit=crop&q=80',
+    created_by: 'user-bendahara',
+    created_at: new Date(Date.now() - 1 * 24 * 3600 * 1000).toISOString(),
+    creator: {
+      id: 'user-bendahara',
+      name: 'Adinda Putri (Bendahara)',
+      email: 'adinda.bendahara@extrakita.sch.id',
+      role: 'bendahara' as const,
+      created_at: new Date().toISOString(),
+    },
+  },
+];
+
+
