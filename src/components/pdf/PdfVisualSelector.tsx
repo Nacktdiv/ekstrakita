@@ -8,7 +8,7 @@ import {
   Maximize2,
   CheckCircle2,
   Crosshair,
-  Sparkles,
+  FileText,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -294,7 +294,7 @@ export default function PdfVisualSelector({
               onClick={handleAutoSnapBottomRight}
               className="h-8 px-3 text-xs bg-blue-50 text-blue-700 hover:bg-blue-100 border border-blue-200"
             >
-              <Sparkles className="h-3.5 w-3.5 mr-1.5 text-blue-600" />
+              <FileText className="h-3.5 w-3.5 mr-1.5 text-blue-600" />
               Auto-Snap Bottom Right
             </Button>
           </div>

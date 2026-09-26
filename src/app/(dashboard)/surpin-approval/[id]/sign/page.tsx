@@ -16,7 +16,7 @@ import {
   ExternalLink,
   Download,
   Loader2,
-  Sparkles,
+  ScrollText,
 } from 'lucide-react';
 import { createClient } from '@/lib/supabase/client';
 import { BorrowingRequestWithDetails } from '@/types';
@@ -227,7 +227,7 @@ export default function AdminSignPage() {
               </span>
             </div>
             <span className="text-[11px] text-emerald-700 font-semibold bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200 flex items-center gap-1">
-              <Sparkles className="h-3 w-3" /> Area Sorotan TTD
+              <ScrollText className="h-3 w-3" /> Area Sorotan TTD
             </span>
           </div>
 

@@ -3,7 +3,7 @@
 import * as React from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { Sparkles, ArrowRight, Lock, Mail, User as UserIcon, Shield, AlertCircle, CheckCircle2, Loader2 } from 'lucide-react';
+import { User, ArrowRight, Lock, Mail, User as UserIcon, Shield, AlertCircle, CheckCircle2, Loader2 } from 'lucide-react';
 import { createClient } from '@/lib/supabase/client';
 import { Button } from '@/components/ui/button';
 import { UserRole } from '@/types';
@@ -72,7 +72,7 @@ export default function RegisterPage() {
         {/* Header */}
         <div className="text-center">
           <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-slate-900 text-white shadow-sm mb-3">
-            <Sparkles className="h-6 w-6 text-blue-400" />
+            <User className="h-6 w-6 text-blue-400" />
           </div>
           <h1 className="text-2xl font-extrabold text-slate-900 tracking-tight">Daftar Akun Baru</h1>
           <p className="text-xs text-slate-500 mt-1">

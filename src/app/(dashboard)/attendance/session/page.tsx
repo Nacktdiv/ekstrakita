@@ -11,7 +11,7 @@ import {
   Minimize,
   ArrowLeft,
   Calendar,
-  Sparkles,
+  LayoutList,
   CheckCircle2,
 } from 'lucide-react';
 import { createClient } from '@/lib/supabase/client';
@@ -143,7 +143,7 @@ export default function AttendanceSessionPage() {
           <div className="bg-white rounded-2xl border border-slate-200 p-5 shadow-sm space-y-3">
             <div className="flex items-center justify-between pb-3 border-b border-slate-100">
               <h3 className="text-sm font-bold text-slate-900 flex items-center gap-2">
-                <Sparkles className="h-4 w-4 text-amber-500" />
+                <LayoutList className="h-4 w-4 text-amber-500" />
                 Aktivitas Siswa Hadir (Live Feed)
               </h3>
               <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">

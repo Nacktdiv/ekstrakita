@@ -14,7 +14,7 @@ import {
   UploadCloud,
   FileText,
   Trash2,
-  Sparkles,
+  Wrench,
   Loader2,
   ArrowRight,
 } from 'lucide-react';
@@ -453,7 +453,7 @@ export default function RequestBorrowingPage() {
 
               {/* Instructions */}
               <div className="bg-blue-50 border border-blue-200 rounded-xl p-3.5 text-xs text-blue-900 flex items-start gap-2.5">
-                <Sparkles className="h-4 w-4 text-blue-600 mt-0.5 flex-shrink-0" />
+                <Wrench className="h-4 w-4 text-blue-600 mt-0.5 flex-shrink-0" />
                 <div>
                   <p className="font-bold">Tentukan Lokasi Tanda Tangan Digital (TTD):</p>
                   <p className="text-blue-800 mt-0.5">

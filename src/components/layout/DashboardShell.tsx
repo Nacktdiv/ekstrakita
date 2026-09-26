@@ -15,7 +15,7 @@ import {
   Shield,
   Menu,
   X,
-  Sparkles,
+  UserGroup,
 } from 'lucide-react';
 import { User, UserRole } from '@/types';
 import { cn, formatRoleName } from '@/lib/utils';
@@ -109,7 +109,7 @@ export default function DashboardShell({ user: initialUser, children }: Dashboar
         {/* Brand Header */}
         <div className="h-16 px-6 flex items-center gap-3 border-b border-slate-100">
           <div className="h-10 w-10 rounded-xl bg-slate-900 flex items-center justify-center text-white shadow-sm">
-            <Sparkles className="h-5 w-5 text-blue-400" />
+            <UserGroup className="h-5 w-5 text-blue-400" />
           </div>
           <div>
             <span className="font-bold text-lg text-slate-900 tracking-tight">ExtraKita</span>
@@ -186,7 +186,7 @@ export default function DashboardShell({ user: initialUser, children }: Dashboar
       <header className="md:hidden sticky top-0 z-30 bg-white/95 backdrop-blur border-b border-slate-200 px-4 h-14 flex items-center justify-between">
         <div className="flex items-center gap-2.5">
           <div className="h-8 w-8 rounded-lg bg-slate-900 flex items-center justify-center text-white">
-            <Sparkles className="h-4 w-4 text-blue-400" />
+            <UserGroup className="h-4 w-4 text-blue-400" />
           </div>
           <span className="font-bold text-base text-slate-900">ExtraKita</span>
         </div>
@@ -215,7 +215,7 @@ export default function DashboardShell({ user: initialUser, children }: Dashboar
             <div className="flex items-center justify-between pb-4 border-b border-slate-100">
               <div className="flex items-center gap-2">
                 <div className="h-8 w-8 rounded-lg bg-slate-900 flex items-center justify-center text-white">
-                  <Sparkles className="h-4 w-4 text-blue-400" />
+                  <UserGroup className="h-4 w-4 text-blue-400" />
                 </div>
                 <span className="font-bold text-base text-slate-900">ExtraKita</span>
               </div>

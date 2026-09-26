@@ -12,7 +12,7 @@ import {
   AlertCircle,
   ExternalLink,
   ShieldCheck,
-  Sparkles,
+  LayoutList,
 } from 'lucide-react';
 import { createClient } from '@/lib/supabase/client';
 import { Attendance, User } from '@/types';
@@ -163,7 +163,7 @@ export default function AttendancePage() {
         </div>
       ) : (
         <div className="bg-blue-50 border border-blue-200 rounded-2xl p-4 flex items-center gap-3 text-blue-900 text-xs shadow-sm">
-          <Sparkles className="h-5 w-5 text-blue-600 flex-shrink-0" />
+          <LayoutList className="h-5 w-5 text-blue-600 flex-shrink-0" />
           <p>
             Sesi latihan hari ini telah dibuka! Arahkan kamera scanner ke layar proyektor untuk mencatat absensi sebelum token 10 detik berganti.
           </p>

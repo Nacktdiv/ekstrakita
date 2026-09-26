@@ -6,7 +6,7 @@ import {
   RotateCcw,
   ShieldCheck,
   Clock,
-  Sparkles,
+  QrCode,
   Pause,
   Play,
   Copy,
@@ -139,7 +139,7 @@ export default function QrCodeGenerator({
           />
         </div>
         <p className="text-[10px] text-slate-400 mt-1.5 flex items-center justify-center gap-1">
-          <Sparkles className="h-3 w-3 text-blue-500" />
+          <QrCode className="h-3 w-3 text-blue-500" />
           QR code otomatis diperbarui untuk mencegah kecurangan foto atau screenshot.
         </p>
       </div>

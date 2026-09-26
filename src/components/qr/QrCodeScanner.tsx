@@ -7,7 +7,7 @@ import {
   CheckCircle2,
   AlertTriangle,
   RotateCcw,
-  Sparkles,
+  Search,
   ShieldAlert,
   Loader2,
   ScanLine,
@@ -165,7 +165,7 @@ export default function QrCodeScanner({ onScanSuccess, userId }: QrCodeScannerPr
                 {scanResult.message}
               </p>
               <div className="mt-3 flex items-center gap-2 text-[11px] font-semibold text-emerald-900 bg-emerald-100/60 px-3 py-1.5 rounded-lg">
-                <Sparkles className="h-3.5 w-3.5 text-emerald-600" />
+                <Search className="h-3.5 w-3.5 text-emerald-600" />
                 <span>Terverifikasi • Anti-Cheat Valid</span>
               </div>
             </div>
